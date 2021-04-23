@@ -5,9 +5,10 @@ jobs:
   publish:
     runs-on: ubuntu-latest
 
-    strategy:         
+    strategy:
+      fail-fast: false
       matrix:
-        registry: [ghcr.io, docker.pkg.github.com]    
+        registry: [ghcr.io, docker.pkg.github.com]
 
     env:
       IMAGE: ${{ matrix.registry }}/${{ github.repository }}2:latest
