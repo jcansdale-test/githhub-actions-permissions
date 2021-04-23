@@ -11,7 +11,7 @@ jobs:
         registry: [ghcr.io, docker.pkg.github.com]
 
     env:
-      IMAGE: ${{ matrix.registry }}/${{ github.repository }}:latest
+      IMAGE: ${{ matrix.registry }}/${{ github.repository }}/githhub-actions-permissions:latest
 
     steps:
       - uses: actions/checkout@v2
